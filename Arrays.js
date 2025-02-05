@@ -15,14 +15,18 @@
 // console.log(myArray);
 
 const myArr = [1, 2, 3, 4, 5];
+const myArr2 = [1, 2, 3, 4, 5, 5, 6, 7, 8];
 
-let myArr1 = myArr.slice(0, 2);
-console.log("a", myArr);
-console.log(myArr1);
+// Use of the spread operator
+let myArr3 = [...myArr, ...myArr2];
+console.log(...myArr, ...myArr2);
+// let myArr1 = myArr.slice(0, 2);
+// console.log("a", myArr);
+// console.log(myArr1);
 
-let myArr2 = myArr.splice(0, 2);
-console.log("b", myArr);
-console.log(myArr2);
+// let myArr2 = myArr.splice(0, 2);
+// console.log("b", myArr);
+// console.log(myArr2);
 
 /*
     a [ 1, 2, 3, 4, 5 ]
