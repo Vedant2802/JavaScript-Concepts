@@ -13,8 +13,8 @@
     String to number conversion
 */
 
-let str1 = "hello";
-let str2 = "Akshat";
+// let str1 = "hello";
+// let str2 = "Akshat";
 
 // console.log(str1 + str2);
 
@@ -28,11 +28,19 @@ let str2 = "Akshat";
 // console.log(typeof myname2);
 // console.log(myname2);
 
-console.log("2" == 2);
+// console.log("2" == 2);
 
-myname = [1, 3, 4, 6];
+// myname = [1, 3, 4, 6];
 
-console.log(typeof myname);
+// console.log(typeof myname);
 
-let myName = "Akshat Vedant";
-console.log(myName);
+// let myName = "Akshat Vedant";
+// console.log(myName);
+
+let str = "35";
+let str2 = "56";
+let str3 = str + str2;
+console.log(str3);
+console.log(typeof str);
+
+console.log(typeof NaN);

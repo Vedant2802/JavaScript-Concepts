@@ -1,29 +1,41 @@
-// for of loop
+// let name = "akshat";
 
-// these are array specific loops
+// console.log(Boolean(name));
 
-// const arr = [1, 2, 3, 3, 5];
-// for (const element of arr) {
-//   console.log(element);
-// }
+// /*
+//     1 => true
+//     0 => false
+//     "" => false
+//     "Anu string" => true
+// */
 
-// normal for loop , this gives you the index of the arrays , but for of give you the values of each index
-// for (index = 0; index < arr.length; index++) {
-//   console.log(arr[index]);
-// }
+/*
+    String to number conversion
+*/
 
-// for of can be used on strings or objects also
-// const code = "Hello World";
-// for (const index of code) {
-//   console.log(index);
-// }
+let str1 = "hello";
+let str2 = "Akshat";
 
-// Maps data type
+// console.log(str1 + str2);
 
-const myMap = new Map();
-myMap.set("In", "India");
-myMap.set("fr", "France");
+// console.log(Number(true));
 
-for (const iterator of myMap) {
-  console.log(iterator);
-}
+// console.log(typeof undefined);
+
+// let myname = "28akshat";
+// let myname2 = Number(myname);
+
+// console.log(typeof myname2);
+// console.log(myname2);
+
+// console.log("2" == 2);
+
+// myname = [1, 3, 4, 6];
+
+// console.log(typeof myname);
+
+// let myName = "Akshat Vedant";
+// console.log(myName);
+
+let str = "35";
+console.log(typeof str);
