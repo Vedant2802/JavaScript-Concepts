@@ -24,15 +24,15 @@
 // console.log(arr);
 // console.log(arr3);
 
-function foodCost(name, price) {
-  this.name = name;
-  this.price = price;
-}
+// function foodCost(name, price) {
+//   this.name = name;
+//   this.price = price;
+// }
 
-foodCost.prototype.incrementPrice = function increment() {
-  this.price++;
-  console.log(this.price++);
-};
+// foodCost.prototype.incrementPrice = function increment() {
+//   this.price++;
+//   console.log(this.price++);
+// };
 
 //this keyword inside arrow functions does not work , this code give the value as Nan
 // foodCost.prototype.incrementPrice = () => {
@@ -40,7 +40,7 @@ foodCost.prototype.incrementPrice = function increment() {
 //   console.log(this.price++);
 // };
 
-console.log(foodCost.prototype.incrementPrice);
+// console.log(foodCost.prototype.incrementPrice);
 
-const updatedprice = new foodCost("aksaht", 400);
-updatedprice.incrementPrice();
+// const updatedprice = new foodCost("akshatt", 400);
+// updatedprice.incrementPrice();
