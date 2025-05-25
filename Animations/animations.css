@@ -1,0 +1,81 @@
+.box {
+  height: 4rem;
+  width: 4rem;
+  background-color: red;
+  border: 1px solid black;
+  /* animation-name: grow; */
+  /* animation-duration: 2s; */
+  /* delay before the animation starts */
+  /* animation-delay: 2s; */
+  /* how many times the animation run */
+  /* animation-iteration-count: infinite; */
+
+  /* Describes how the animation will progress over one cycle of its duration  */
+
+  /* animation-timing-function: ease-in; */
+
+  /* how the animation play out */
+
+  /* animation-direction: alternate-reverse; */
+
+  /* animation-fill-mode: backwards; */
+  /* animation-fill-mode: both; */
+  animation: supersize 2s ease-in 0s 4 alternate;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes grow {
+  /* from {
+    width: 50px;
+    height: 50px;
+    background: red;
+  }
+  to {
+    width: 100px;
+    height: 100px;
+    background: green;
+  } */
+
+  /* we can use percntages also here */
+
+  /* 0% {
+    width: 50px;
+    height: 50px;
+    background: red;
+  }
+
+  50% {
+    width: 50px;
+    height: 100px;
+    background: blue;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+    background: green;
+  } */
+}
+
+@keyframes supersize {
+  0% {
+    width: 10px;
+    height: 10px;
+    background: blue;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+    background: red;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background: green;
+  }
+}

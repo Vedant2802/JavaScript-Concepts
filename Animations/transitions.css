@@ -1,0 +1,23 @@
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkblue;
+  font-size: 5rem;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+  /* Specifies how long the transition from the old value to the new value should take. */
+  /* transition-duration: 2s; */
+  /* adds a delay before applying the transition */
+  /* transition-delay: 1s; */
+  /* property to add how the transition stops */
+  /* transition-timing-function: ease; */
+
+  /* single shorthand */
+  transition: font-size 0.5s ease-in 0.5s;
+}
+
+.heading:hover {
+  color: aquamarine;
+  font-size: 6rem;
+}
