@@ -1,11 +1,17 @@
-let User = function (firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.getFullName = function () {
-    console.log(`the full name is ${this.firstName}  ${this.lastName} `);
-  };
-};
+// ES6 syntactical sugar
 
-const Akshat = new User("Akshat", "Vedant");
-console.log(Akshat);
-console.log(Akshat.getFullName());
+class User {
+  constructor(username, email, password) {
+    this.my_username = username;
+    this.my_email = email;
+    this.my_password = password;
+  }
+
+  encryptPassword() {
+    return `${this.my_password}abc`;
+  }
+}
+
+const my_user = new User("Akshat", "abc", "xyz");
+console.log(my_user);
+console.log(my_user.encryptPassword());
