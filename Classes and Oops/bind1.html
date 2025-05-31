@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Button CLicked</button>
+  </body>
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "http://localhost:3000";
+
+        /// requirement
+        document
+          .querySelector("button")
+          //   .addEventListener("click", this.handleClick.bind(this));
+          .addEventListener("click", () => {
+            this.handleClick;
+          });
+        /* Why bind is needed here
+        
+    ❌ Without .bind(this):
+    addEventListener("click", this.handleClick);
+        When the button is clicked:
+
+        this.handleClick is passed as a reference to addEventListener.
+
+        The browser calls it like a normal function:    
+
+        callback(); // not object.method()
+        So this becomes either:
+
+        undefined (in strict mode)
+
+        Or the DOM element (<button>) in non-strict mode
+
+        Result: this.server will throw undefined or error.
+
+    ✅ With .bind(this):
+        addEventListener("click", this.handleClick.bind(this));
+        .bind(this) returns a new function where this is permanently bound to your React instance.
+
+        So when the callback is triggered, this.server correctly refers to "http://localhost:3000".
+    */
+      }
+
+      handleClick() {
+        console.log("the button is clicked");
+        console.log(this.server);
+      }
+    }
+
+    const app = new React();
+  </script>
+</html>
