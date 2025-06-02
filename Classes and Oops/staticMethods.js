@@ -11,7 +11,7 @@ class User {
 
   // once you add static keyword here and then try to access the method
   // you will get an error that storeId is not a function
-  storeId() {
+  static storeId() {
     return `The id is ${this.id}`;
   }
 }
