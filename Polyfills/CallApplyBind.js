@@ -1,20 +1,20 @@
-let name1 = {
-  firstName: "Akshat",
-  lastName: "Vedant",
-  //   printFullName: function () {
-  //     console.log("The full name is ", `${this.firstName}${this.lastName}`);
-  //   },
-};
+// let name1 = {
+//   firstName: "Akshat",
+//   lastName: "Vedant",
+//   //   printFullName: function () {
+//   //     console.log("The full name is ", `${this.firstName}${this.lastName}`);
+//   //   },
+// };
 
-function printFullName(hometown) {
-  console.log(
-    "The full name is",
-    `${this.firstName}  ${this.lastName} ${hometown}`
-  );
-  console.log(this);
-}
+// function printFullName(hometown) {
+//   console.log(
+//     "The full name is",
+//     `${this.firstName}  ${this.lastName} ${hometown}`
+//   );
+//   console.log(this);
+// }
 
-printFullName.apply(name1, ["Delhi"]);
+// printFullName.apply(name1, ["Delhi"]);
 
 // let name2 = {
 //   firstName: "Sachin",
@@ -43,17 +43,25 @@ function printFullName(address) {
   );
 }
 
-Function.prototype.customBind = function (context, ...boundArgs) {
+Function.prototype.customBind = function (context, args) {
   const originalFunction = this;
-  return function (...callArgs) {
-    return originalFunction.apply(context, [...boundArgs, ...callArgs]);
+  return function (callargs) {
+    return originalFunction.apply(context, [...args, ...callargs]);
   };
 };
 
-// function customBind(obj, fn) {
-//   return function () {
-//     this.fn.call(obj);
+// Function.prototype.customBind = function (context, ...boundArgs) {
+//   const originalFunction = this;
+//   return function (...callArgs) {
+//     return originalFunction.apply(context, [...boundArgs, ...callArgs]);
 //   };
-// }
+// };
+
+// // function customBind(obj, fn) {
+// //   return function () {
+// //     this.fn.call(obj);
+// //   };
+// // }
 
 const variable = printFullName.customBind();
+console.log(variable);
