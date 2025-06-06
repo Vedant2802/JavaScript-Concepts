@@ -1,16 +1,19 @@
-var x = 1;
-a();
-b();
+const one = (cb, number) => {
+  let numberOfCalls = 0;
+  const intervalId = setInterval(() => {
+    cb();
+    numberOfCalls += 1;
 
-function a() {
-  var x = 10;
-  console.log(x);
-}
+    if (numberOfCalls < 10) {
+      console.log("okay");
+    } else {
+      clearInterval(intervalId);
+    }
+  }, number);
+};
 
-function b() {
-  var x = 100;
-  console.log(x);
-}
-console.log(x);
-// a();
-// b();
+const callback = () => {
+  console.log("Akshat Vedant");
+};
+
+one(callback, 1000);
