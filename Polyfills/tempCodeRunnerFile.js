@@ -1,0 +1,1 @@
+/ name1.printFullName.call(name2);
