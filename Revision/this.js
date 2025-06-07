@@ -103,4 +103,37 @@ const {
   name2: { fullname },
 } = newObj;
 
-console.log(fullname());
+// console.log(fullname());
+
+// Explicit Binding : Call , Apply and Bind
+
+function greetings() {
+  console.log(this);
+  console.log(`hello ${this.name} belongs to ${this.address}`);
+}
+// greetings();
+
+const user = {
+  name: "Akshat",
+  address: "Muzaffarpur",
+};
+
+// How to call the Greetings function in the context of the user Object
+
+// greetings.call({
+//   name: "ram",
+//   address: "shyam",
+// });
+
+greetings.call(user);
+
+// user.greetings();
+
+// bind() , bind does not immediately execute the function , instead it returns a new function reference , that can be executed at a later point of time
+
+Function.prototype.customBind = function (context, args) {
+  const originalFunction = this;
+  return function (callargs) {
+    return originalFunction.apply(context, [...args, ...callargs]);
+  };
+};
