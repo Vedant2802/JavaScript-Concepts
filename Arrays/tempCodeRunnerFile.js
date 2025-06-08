@@ -15,7 +15,7 @@ let arr2 = [6, 12, 35, 4, 5, 6, 7];
 
 // shift() , removes the element from the begining of the array , also mutates the original array
 
-// slice() , returns the copy of a particular portion of an array , do not mutate the original array
+// slice() , returns the copy of a prticular portion of an array , do not mutate the original array
 // const slicedArray = arr.slice();
 // console.log(slicedArray);
 
@@ -78,42 +78,8 @@ let arr2 = [6, 12, 35, 4, 5, 6, 7];
 
 // Array iteration methods
 
-// filter() , map() , reduce()
+// filter() , map() ,
 
-// const mapped_data = arr2
-//   .map((num) => (num = num * num))
-//   .filter((num) => num < 100);
+const mapped_data = arr2.map((num) => (num = num * num));
 
-// console.log(mapped_data);
-
-// reduce() method , when you want a single value out of the array after all the computations in that case you will use reduce()
-
-//Syntax = arr.reduce(reducer(accumulator , currentValue), initialValue))
-//  the return value of the callback function becomes the new accumulator (acc) value for the next iteration.
-
-// const value = arr2.reduce((acc, curr) => {
-//   return acc + curr;
-// }, 0);
-
-// console.log(value);
-
-// reduceRoght() , starts the itertion from right to left , instead of left to right , functionality wise same as reduce
-
-// some() if the condition is satidfied for atleast one element in the array then we get true , otherwise we get false , (Always a boolean value)
-
-// example
-
-// const value = arr2.some((item) => item == 5);
-
-// console.log(value);
-
-// every() , returns true , if the condition satisfies the condition for all the elements in an Array
-
-// find() findLast(), return the first value that satisfies the condition , findLast() starts from right to left
-
-// const value = arr2.find((item) => item < 10);
-// console.log(value);
-
-// findIndex() , findLastIndex() , findLast()
-
-// forEach() , does not return anything unlike map() ,filter() and reduce()
+console.log(mapped_data);
