@@ -133,23 +133,59 @@ const child = document.getElementById("child");
 // Event Delegation -> add a single listener to a parent element , instead of adding individual listeners
 // Diff between target and current target (target is the element on which the event was fired) and (currentTarget is the parent or element on which the event listener is attached to)
 
-const itemList = document.getElementById("itemlist");
-const items = itemList.children;
+// const itemList = document.getElementById("itemlist");
+// const items = itemList.children;
 // console.log(items);
 
-itemList.addEventListener("click", (event) => {
-  // Array.from(items)
-  //   .filter((item) => item.innerText.includes("Shanky"))
-  //   .map((item) => item.innerText.toUpperCase())
-  //   .forEach((text) => console.log(text));
+// itemList.addEventListener("click", (event) => {
+// Array.from(items)
+//   .filter((item) => item.innerText.includes("Shanky"))
+//   .map((item) => item.innerText.toUpperCase())
+//   .forEach((text) => console.log(text));
 
-  // [...items].forEach((item) => {
-  //   // console.log(e.target);
-  //   console.log(item.innerText);
-  // });
-  event.target.closest("li")
-    ? console.log(`you clicked on ${event.target.innerText}`)
-    : "";
-  // console.log(event.currentTarget);
-  // console.log(e);
+// [...items].forEach((item) => {
+//   // console.log(e.target);
+//   console.log(item.innerText);
+// });
+// event.target.closest("li")
+//   ? console.log(`you clicked on ${event.target.innerText}`)
+//   : "";
+// console.log(event.currentTarget);
+// console.log(e);
+// });
+
+// e.stopPropagation() , stops the bubbling process
+
+// prevent Defaults , e.preventDefault() , prevents the default behaviour of a HTML element
+
+// FAQ
+
+const mainDiv = document.createElement("div");
+document.body.append(mainDiv);
+function createElements() {
+  for (let i = 0; i < 3; i++) {
+    const parentDiv = document.createElement("div");
+    parentDiv.innerText =
+      "🧠 Important Concept: The Event object is created at dispatch time, not when addEventListener is called.";
+    parentDiv.style.border = "2px solid black";
+    parentDiv.style.borderRadius = "8px";
+    parentDiv.className = "new";
+    mainDiv.appendChild(parentDiv);
+  }
+}
+
+createElements();
+
+mainDiv.addEventListener("click", (e) => {
+  // console.log(e.target.classList);
+  e.stopPropagation();
+  e.target.classList.toggle("show");
+});
+
+document.addEventListener("click", () => {
+  console.log("click called");
+  const allDiv = document.querySelectorAll(".new");
+  [...allDiv].forEach((item) => {
+    item.classList.toggle("show");
+  });
 });
