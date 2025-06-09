@@ -4,21 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
+  <!-- <style>
     div {
       border: 2px solid black;
       padding: 30px;
       min-height: 100px;
       min-width: 100px;
     }
-  </style>
+  </style> -->
   <body>
     <div id="grandparent">
-      <div id="parent">
-        <div id="children" class="children"></div>
+      grandparent
+      <div
+        id="parent"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        Parent
+        <!-- <div id="children" class="children"></div>
+        <input
+          type="text"
+          id="input"
+          placeholder="Enter something"
+          style="
+            height: 100px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 16px;
+            font-size: 16px;
+          "
+        /> -->
+        <button id="child">Click!</button>
       </div>
     </div>
+    <ul id="itemlist">
+      <li>Akshat</li>
+      <li>Vedant</li>
+      <li>Shanky</li>
+    </ul>
     <script src="event.js"></script>
   </body>
 </html>
