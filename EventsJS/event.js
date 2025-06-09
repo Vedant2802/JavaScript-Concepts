@@ -160,32 +160,32 @@ const child = document.getElementById("child");
 
 // FAQ
 
-const mainDiv = document.createElement("div");
-document.body.append(mainDiv);
-function createElements() {
-  for (let i = 0; i < 3; i++) {
-    const parentDiv = document.createElement("div");
-    parentDiv.innerText =
-      "🧠 Important Concept: The Event object is created at dispatch time, not when addEventListener is called.";
-    parentDiv.style.border = "2px solid black";
-    parentDiv.style.borderRadius = "8px";
-    parentDiv.className = "new";
-    mainDiv.appendChild(parentDiv);
-  }
-}
+// const mainDiv = document.createElement("div");
+// document.body.append(mainDiv);
+// function createElements() {
+//   for (let i = 0; i < 3; i++) {
+//     const parentDiv = document.createElement("div");
+//     parentDiv.innerText =
+//       "🧠 Important Concept: The Event object is created at dispatch time, not when addEventListener is called.";
+//     parentDiv.style.border = "2px solid black";
+//     parentDiv.style.borderRadius = "8px";
+//     parentDiv.className = "new";
+//     mainDiv.appendChild(parentDiv);
+//   }
+// }
 
-createElements();
+// createElements();
 
-mainDiv.addEventListener("click", (e) => {
-  // console.log(e.target.classList);
-  e.stopPropagation();
-  e.target.classList.toggle("show");
-});
+// mainDiv.addEventListener("click", (e) => {
+//   // console.log(e.target.classList);
+//   e.stopPropagation();
+//   e.target.classList.toggle("show");
+// });
 
-document.addEventListener("click", () => {
-  console.log("click called");
-  const allDiv = document.querySelectorAll(".new");
-  [...allDiv].forEach((item) => {
-    item.classList.toggle("show");
-  });
-});
+// document.addEventListener("click", () => {
+//   console.log("click called");
+//   const allDiv = document.querySelectorAll(".new");
+//   [...allDiv].forEach((item) => {
+//     item.classList.toggle("show");
+//   });
+// });
