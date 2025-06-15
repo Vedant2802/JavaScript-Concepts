@@ -3,7 +3,7 @@ const stopButton = document.getElementById("stop");
 let sec = 0;
 let min = 0;
 let hour = 0;
-let timer = null;
+// let timer = null;
 
 // const timer = setInterval(increment, 1000);
 
