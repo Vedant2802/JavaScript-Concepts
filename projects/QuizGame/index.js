@@ -79,11 +79,11 @@ const quizData = [
     options: ["90°C", "95°C", "100°C", "110°C"],
     correct: 2,
   },
-  {
-    question: "Which animal is known as the King of the Jungle?",
-    options: ["Elephant", "Tiger", "Lion", "Bear"],
-    correct: 2,
-  },
+  // {
+  //   question: "Which animal is known as the King of the Jungle?",
+  //   options: ["Elephant", "Tiger", "Lion", "Bear"],
+  //   correct: 2,
+  // },
 ];
 
 // const question = document.getElementById("question");
