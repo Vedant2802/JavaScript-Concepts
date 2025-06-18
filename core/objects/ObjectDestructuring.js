@@ -19,8 +19,9 @@ const user = {
 };
 
 const { subjects, subjectLength = subjects.length } = user;
+console.log(subjectLength);
 
-// console.log(subjects, subjectLength);
+console.log(subjects, subjectLength);
 
 // Creating Aliases during destructuring
 
@@ -77,9 +78,9 @@ const newObj = [
 ];
 
 // const iterableObject = Object.entries(newObj);
-for (let { name, age } of newObj) {
-  console.log(name, age);
-}
+// for (let { name, age } of newObj) {
+//   console.log(name, age);
+// }
 
 for (const key in newObj) {
   //   if (Object.prototype.hasOwnProperty.call(object, key)) {
