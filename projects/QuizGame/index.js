@@ -129,13 +129,14 @@ let score = 0;
 let timeLeft = 15;
 let timer;
 
-function updateTimer() {
-  timerEl.textContent = `${timeLeft}`;
-}
+// function updateTimer() {
+//   timerEl.textContent = `${timeLeft}`;
+// }
 function loadQuestion() {
   timeLeft = 15;
   timer = setInterval(countdown, 1000);
-  updateTimer();
+  // updateTimer();
+  timerEl.textContent = `${timeLeft}`;
 
   const q = questions[currentQuestion];
   questionEl.textContent = `Q${currentQuestion + 1} . ${q.question}`;
@@ -189,7 +190,8 @@ function showResult() {
 
 function countdown() {
   timeLeft--;
-  updateTimer();
+  // updateTimer();
+  timerEl.textContent = `${timeLeft}`;
   if (timeLeft === 0) {
     clearInterval(timer);
     selectAnswer(questions[currentQuestion]?.correct, false);
