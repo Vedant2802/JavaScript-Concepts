@@ -97,7 +97,7 @@ let arr2 = [6, 12, 35, 4, 5, 6, 7];
 
 // console.log(value);
 
-// reduceRoght() , starts the itertion from right to left , instead of left to right , functionality wise same as reduce
+// reduceRight() , starts the itertion from right to left , instead of left to right , functionality wise same as reduce
 
 // some() if the condition is satidfied for atleast one element in the array then we get true , otherwise we get false , (Always a boolean value)
 
