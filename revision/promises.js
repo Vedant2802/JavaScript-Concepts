@@ -131,3 +131,75 @@
 // promise.then((res) => {
 //   console.log(res);
 // });
+
+// Handle multiple promises
+
+// Promise.all([promises])
+
+const pikachu = "https://pokeapi.co/api/v2/pokemon/pikachu";
+const bulbasur = "https://pokeapi.co/api/v2/evolution-chain/1/";
+const thunderbolt = "https://pokeapi.co/api/v2/move/thunderbolt";
+
+// const getPikachu = fetch(pikachu);
+// getPikachu
+//   .then(function (result) {
+//     return result.json();
+//   })
+//   .then((res) => {
+//     console.log(res);
+//     return res;
+//   });
+
+let promise_1 = fetch(pikachu);
+let promise_2 = fetch(bulbasur);
+let promise_3 = fetch(thunderbolt);
+
+// Promise.all([promise_1, promise_2, promise_3])
+//   .then((res) => {
+//     console.log(res);
+//     // return res.json();
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// In Promise.all() , if any of the promises fail , all the other also fails
+
+// Promise.any([promises])
+
+// Promise.any([promise_1, promise_2, promise_3])
+//   .then((res) => {
+//     console.log(res);
+//     // return res.json();
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// In this whichever promise if fulfilled first , that is returned
+
+// Promise.allSettled([promises])
+// Settling a promise means fulfilling or rejecting
+
+// Promise.allSettled([promise_1, promise_2, promise_3])
+//   .then((res) => {
+//     console.log(res);
+//     // return res.json();
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// Promise.race[promises]
+// Returns the first promise settled , either resolved or rejected
+
+// Promise.race([promise_1, promise_2, promise_3])
+//   .then((res) => {
+//     console.log(res);
+//     // return res.json();
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// How to cancel a promise
