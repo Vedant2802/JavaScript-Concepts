@@ -39,6 +39,7 @@
 
 // fetchWithQueryParams();
 
+// looping over multiple promises
 const ids = [1, 2, 3, 4, 5];
 
 const fetchData = (id) => {
@@ -51,6 +52,7 @@ const loopAll = async () => {
     responses.map((item) => item.value.json())
   );
   console.log(data);
+  data.forEach((data) => console.log(data.value));
 };
 
 loopAll();
