@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+#my-data {
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 250px;
+  height: 200px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
