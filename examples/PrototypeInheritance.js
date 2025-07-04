@@ -26,3 +26,25 @@ Function.prototype.myName = function () {
 function abc() {}
 
 console.log(abc.myName());
+
+class Car {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+let object1 = new Car("bnw", 10);
+
+console.log(Object.getPrototypeOf(object1) === Car.prototype);
+
+Object.prototype.getWheels = function () {
+  console.log(4);
+};
+
+// object1.getWheels();
+Car.getWheels();
+
+// Object.setPrototypeOf(object1, Car);
+
+// object1.prototype === Car.prototype;
