@@ -1,0 +1,37 @@
+import { Admin } from "./models/Admin";
+import { Book } from "./models/Books";
+import { Member } from "./models/Member";
+
+const userSwitcher = document.getElementById("userSwitcher");
+const bookSection = document.getElementById("bookSection");
+const borrowedSection = document.getElementById("borrowedSection");
+const bookForm = document.getElementById("bookForm");
+
+const avaialbleBooks = [];
+
+let currentUser = new Member("John Doe , john@gmail.com");
+userSwitcher.addEventListener("change", function (e) {
+  const selected = e.target.value;
+  currentUser =
+    selected === "admin"
+      ? new Admin("Alice", "alice@gmail.com")
+      : new Member("John Doe , john@gmail.com");
+
+  bookSection.style.display = selected === "admin" ? "block" : "none";
+  borrowedSection.style.display = selected === "member" ? "block" : "none";
+});
+
+bookForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const genre = document.getElementById("genre").value;
+
+  const addedBook = new Book(title, author, genre);
+  avaialbleBooks.push(addedBook);
+  console.log(avaialbleBooks);
+});
+
+// initial render
+
+bookSection.style.display = "none";
