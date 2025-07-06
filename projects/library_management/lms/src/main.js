@@ -1,14 +1,17 @@
 import { Admin } from "./models/Admin";
 import { Book } from "./models/Books";
 import { Member } from "./models/Member";
+import { LibrarySystem } from "./services/LibraryService";
 
 const userSwitcher = document.getElementById("userSwitcher");
 const bookSection = document.getElementById("bookSection");
 const borrowedSection = document.getElementById("borrowedSection");
 const bookForm = document.getElementById("bookForm");
-const bookList = document.getElementById("bookList");
+// const bookList = document.getElementById("bookList");
 
-const availableBooks = [];
+// const availableBooks = [];
+
+const library = new LibrarySystem();
 
 let currentUser = new Admin("Alice", "alice@gmail.com");
 userSwitcher.addEventListener("change", function (e) {
@@ -28,13 +31,14 @@ bookForm.addEventListener("submit", function (e) {
   const author = document.getElementById("author").value;
   const genre = document.getElementById("genre").value;
 
-  const addedBook = new Book(title, author, genre);
-  availableBooks.push(addedBook);
-  console.log(availableBooks);
-  const listElement = document.createElement("li");
-  listElement.id = addedBook.id;
-  listElement.innerText = title;
-  bookList.appendChild(listElement);
+  const book = new Book(title, author, genre);
+  library.addBook(book);
+  //   availableBooks.push(addedBook);
+  //   console.log(availableBooks);
+  //   const listElement = document.createElement("li");
+  //   listElement.id = addedBook.id;
+  //   listElement.innerText = title;
+  //   bookList.appendChild(listElement);
 });
 
 // initial render
