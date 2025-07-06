@@ -51,7 +51,7 @@ function renderBooks() {
   bookList.innerHTML = "";
   library.getAllBooks().forEach((book) => {
     const li = document.createElement("li");
-    li.innerHTML = `<div> <strong> ${book.title}</strong></div>`;
+    li.innerHTML = `<div> <strong> ${book.title}</strong> by <strong> ${book.author} </strong></div>`;
     bookList.appendChild(li);
   });
 }
