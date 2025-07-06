@@ -7,7 +7,7 @@ const userSwitcher = document.getElementById("userSwitcher");
 const bookSection = document.getElementById("bookSection");
 const borrowedSection = document.getElementById("borrowedSection");
 const bookForm = document.getElementById("bookForm");
-// const bookList = document.getElementById("bookList");
+const bookList = document.getElementById("bookList");
 
 // const availableBooks = [];
 
@@ -33,6 +33,7 @@ bookForm.addEventListener("submit", function (e) {
 
   const book = new Book(title, author, genre);
   library.addBook(book);
+  renderBooks();
   //   availableBooks.push(addedBook);
   //   console.log(availableBooks);
   //   const listElement = document.createElement("li");
@@ -45,3 +46,12 @@ bookForm.addEventListener("submit", function (e) {
 
 // bookSection.style.display = "none";
 borrowedSection.style.display = "none";
+
+function renderBooks() {
+  bookList.innerHTML = "";
+  library.getAllBooks().forEach((book) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<div> <strong> ${book.title}</strong></div>`;
+    bookList.appendChild(li);
+  });
+}
