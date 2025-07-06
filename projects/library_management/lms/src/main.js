@@ -6,10 +6,11 @@ const userSwitcher = document.getElementById("userSwitcher");
 const bookSection = document.getElementById("bookSection");
 const borrowedSection = document.getElementById("borrowedSection");
 const bookForm = document.getElementById("bookForm");
+const bookList = document.getElementById("bookList");
 
-const avaialbleBooks = [];
+const availableBooks = [];
 
-let currentUser = new Member("John Doe , john@gmail.com");
+let currentUser = new Admin("Alice", "alice@gmail.com");
 userSwitcher.addEventListener("change", function (e) {
   const selected = e.target.value;
   currentUser =
@@ -28,10 +29,15 @@ bookForm.addEventListener("submit", function (e) {
   const genre = document.getElementById("genre").value;
 
   const addedBook = new Book(title, author, genre);
-  avaialbleBooks.push(addedBook);
-  console.log(avaialbleBooks);
+  availableBooks.push(addedBook);
+  console.log(availableBooks);
+  const listElement = document.createElement("li");
+  listElement.id = addedBook.id;
+  listElement.innerText = title;
+  bookList.appendChild(listElement);
 });
 
 // initial render
 
-bookSection.style.display = "none";
+// bookSection.style.display = "none";
+borrowedSection.style.display = "none";
